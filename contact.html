@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+<head >
+
+    <!-- Especifica el tipo de documento y la versión de HTML -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para que el sitio sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Sebastian Website</title>
+
+    <!-- STYLESHEET -->
+    
+</head>
+<body>
+
+    <!-- Sección de encabezado del sitio -->
+    <header>
+        <h1>Portafolio de sebastian</h1>
+    </header>
+    <!-- Barra de navegación con enlaces -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe.html">About me</a></li>
+             <li>
+               <a href="contact.html">Contact</a>
+                <ul>
+                    <li><a href="linkinstagram.com">Instagram</a></li>
+                    <li><a href="linkpagina.com">Facebook</a></li>
+                    <li><a href="linkpagina.com">Twitter</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <!-- Contenido principal de la página -->
+    <main>
+        <section>
+            <h2>Visita mis redes sociales</h2>
+            <p>Solo da Click en el icono de la red social que quieras</p>
+            
+            <p>
+            </p>
+            <a href="https://www.instagram.com/rex_elpugsillo?igsh=MTQ1dHJnMDVoanlweg=="> <img src="instagram.png"> </a> 
+            <a href="https://www.facebook.com/jaredsebastian.lopez.3?mibextid=ZbWKwL"> <img src="facebook.png"> </a>
+        </section>
+         <!-- Contenedor principal del slider -->
+    <div class="slider-container">
+        <!-- Contenedor de las imágenes -->
+        <div class="slider-content">
+            <!-- Primera imagen del slider -->
+            <div class="slider-item">
+                <img src="2.jpg" alt="Imagen 1">
+            </div>
+            <!-- Segunda imagen del slider -->
+            <div class="slider-item">
+                <img src="3.jpg" alt="Imagen 2">
+            </div>
+            <!-- Tercera imagen del slider -->
+            <div class="slider-item">
+                <img src="70.jpeg" alt="Imagen 3">
+            </div>
+        </div>
+    </div>
+    </main>
+    <!-- Pie de página del sitio -->
+    <footer>
+        <p>&copy; Mi pagina Sebastian Zuñiga</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0; // Inicializa el índice de las imágenes
+
+            // Obtiene todas las imágenes del slider
+            const slides = document.querySelectorAll(".slider-item");
+            const totalSlides = slides.length; // Calcula el número total de imágenes
+
+            // Función para mostrar las imágenes del slider
+            function showSlides() {
+                slides.forEach(slide => {
+                    slide.style.display = "none"; // Oculta todas las imágenes
+                });
+
+                slideIndex++; // Aumenta el índice de la imagen actual
+                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
+
+                slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
+                setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
+            }
+
+            showSlides(); // Inicia la función para mostrar las imágenes
+        });
+    </script>
+    
+</body>
+</html>
