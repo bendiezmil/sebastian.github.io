@@ -37,25 +37,73 @@
                 <ul>
                     <li><a href="https://www.instagram.com/lozu">Instagram</a></li>
                     <li><a href="https://www.facebook.com/jaredsebastian.lopez.3?mibextid=ZbWKwL">Facebook</a></li>
-                   
+                
                 </ul></li>
         </ul>
     </nav>
     <!-- Contenido principal de la página -->
     <main>
         <section>
-            <h2>Acerca de este sitio</h2>
-            <p></p>
-            Hi, I'm Jared Sebastian Lopez. I have a deep <p></p>passion for photography, capturing moments<p></p> with a unique perspective and artistic flair.<p></p> Welcome to my portfolio, where my<p></p> love for visual storytelling comes to life
-           
-            <p>
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/f84GmsDbSnM?si=YFROsdvkJ53y_GJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Portfolios</h2>
+            <p>Aqui se muestran mis fotos mas destacadas de mi trabajo en fotografia y unas cuantas graciosas</p>
+                <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item">
+                <img src="2.jpg" alt="Imagen 1">
+            </div>
+            <div class="slider-item">
+                <img src="3.jpg" alt="Imagen 2">
+            </div>
+            <div class="slider-item">
+                <img src="70.jpeg" alt="Imagen 3">
+            </div>
+            <div class="slider-item">
+                <img src="1.jpg" alt="Imagen 3">
+            </div>
+            <div class="slider-item">
+                <img src="4.jpg" alt="Imagen 3">
+            </div>
+            <div class="slider-item">
+                <img src="5.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+         
         </section>
     </main>
     <!-- Pie de página del sitio -->
     <footer>
         <p>&copy; Pagina de Sebastian Zuñiga</p>
     </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0; // Inicializa el índice de las imágenes
+
+            // Obtiene todas las imágenes del slider
+            const slides = document.querySelectorAll(".slider-item");
+            const totalSlides = slides.length; // Calcula el número total de imágenes
+
+            // Función para mostrar las imágenes del slider
+            function showSlides() {
+                slides.forEach(slide => {
+                    slide.style.display = "none"; // Oculta todas las imágenes
+                });
+
+                slideIndex++; // Aumenta el índice de la imagen actual
+                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
+
+                slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
+                setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
+            }
+
+            showSlides(); // Inicia la función para mostrar las imágenes
+        });
+    </script>
+    
 </body>
 </html>
